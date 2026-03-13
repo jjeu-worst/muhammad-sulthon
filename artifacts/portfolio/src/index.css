@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Manrope', sans-serif;
+}
+
+:root {
+  /* Minimalist light gray theme */
+  --background: 0 0% 96%; /* #f5f5f5 */
+  --foreground: 0 0% 7%;  /* #121212 */
+  
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 7%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 7%;
+  
+  --primary: 0 0% 9%;
+  --primary-foreground: 0 0% 98%;
+  
+  --secondary: 0 0% 92%;
+  --secondary-foreground: 0 0% 9%;
+  
+  --muted: 0 0% 92%;
+  --muted-foreground: 0 0% 40%;
+  
+  --accent: 0 0% 92%;
+  --accent-foreground: 0 0% 9%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 0 0% 88%;
+  --input: 0 0% 88%;
+  --ring: 0 0% 9%;
+
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 0 0% 4%;
+  --foreground: 0 0% 98%;
+  
+  --card: 0 0% 7%;
+  --card-foreground: 0 0% 98%;
+  
+  --popover: 0 0% 7%;
+  --popover-foreground: 0 0% 98%;
+  
+  --primary: 0 0% 98%;
+  --primary-foreground: 0 0% 9%;
+  
+  --secondary: 0 0% 12%;
+  --secondary-foreground: 0 0% 98%;
+  
+  --muted: 0 0% 12%;
+  --muted-foreground: 0 0% 65%;
+  
+  --accent: 0 0% 12%;
+  --accent-foreground: 0 0% 98%;
+  
+  --border: 0 0% 15%;
+  --input: 0 0% 15%;
+  --ring: 0 0% 83%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary selection:text-primary-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom CSS for the 3D Iridescent Blob */
+.glass-blob {
+  background: 
+    radial-gradient(circle at 30% 20%, rgba(100, 200, 255, 0.85) 0%, transparent 45%),
+    radial-gradient(circle at 75% 15%, rgba(200, 130, 255, 0.80) 0%, transparent 45%),
+    radial-gradient(circle at 20% 75%, rgba(255, 230, 80, 0.80) 0%, transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(255, 100, 130, 0.75) 0%, transparent 45%),
+    radial-gradient(circle at 55% 50%, rgba(80, 255, 200, 0.60) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(220, 220, 255, 0.4) 0%, transparent 70%);
+  filter: blur(2px) contrast(1.05) saturate(1.3);
+  animation: blob-morph 10s ease-in-out infinite, blob-rotate 20s linear infinite;
+  box-shadow: 
+    inset 0 0 60px rgba(255, 255, 255, 0.6),
+    0 0 80px rgba(150, 180, 255, 0.15);
+  opacity: 0.85;
+}
+
+@keyframes blob-morph {
+  0%, 100% { border-radius: 58% 42% 35% 65% / 55% 32% 68% 45%; }
+  25%       { border-radius: 40% 60% 55% 45% / 65% 55% 45% 55%; }
+  50%       { border-radius: 30% 70% 65% 35% / 48% 65% 35% 62%; }
+  75%       { border-radius: 65% 35% 45% 55% / 38% 48% 62% 42%; }
+}
+
+@keyframes blob-rotate {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hide scrollbar for clean look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}

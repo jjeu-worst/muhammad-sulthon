@@ -1,0 +1,11 @@
+packages:
+  "framer-motion": "For smooth scroll-triggered fade-in animations on sections"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility function to efficiently merge Tailwind CSS classes"
+
+images: []
+
+notes:
+  - "The application is a fully static single-page portfolio."
+  - "No backend API is required; all data is mocked locally in custom hooks."
+  - "Using pure CSS/SVG for the 3D iridescent blob to keep it lightweight and performant."
