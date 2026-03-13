@@ -56,7 +56,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <span className="inline-block py-1.5 px-4 rounded-full bg-white/70 backdrop-blur-sm border border-black/8 text-sm font-medium mb-6 shadow-sm">
-            Hi! I'm Rasya Zildan
+            Hi! I'm Muhammad Sulthon
           </span>
         </motion.div>
 
