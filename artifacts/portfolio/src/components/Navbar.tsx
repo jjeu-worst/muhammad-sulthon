@@ -47,7 +47,7 @@ export function Navbar() {
             onClick={() => scrollTo("home")}
             className="text-2xl font-display font-bold tracking-tighter hover:opacity-70 transition-opacity"
           >
-            24<span className="text-muted-foreground">.</span>
+            j<span className="text-muted-foreground">.</span>
           </button>
 
           {/* Desktop Links */}
