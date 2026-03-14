@@ -2,25 +2,25 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    year: "2023 — Now",
+    year: "2026 — Now",
     role: "Full-stack Developer",
     company: "Freelance",
     desc: "Building web and mobile apps for clients across various industries using React, Node.js, and Flutter.",
   },
   {
-    year: "2022 — 2023",
+    year: "2025 — 2026",
     role: "Mobile Developer",
     company: "Startup Project",
     desc: "Developed cross-platform mobile applications with Flutter and integrated REST APIs.",
   },
   {
-    year: "2021 — 2022",
+    year: "2024 — 2025",
     role: "Frontend Developer",
     company: "Agency",
     desc: "Built responsive landing pages and web apps using React and Tailwind CSS.",
   },
   {
-    year: "2020 — 2021",
+    year: "2023 — 2024",
     role: "Junior Developer",
     company: "Internship",
     desc: "Assisted in developing internal tools and learned fundamentals of full-stack development.",
