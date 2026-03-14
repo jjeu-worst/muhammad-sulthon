@@ -4,6 +4,11 @@ import { About } from "@/components/sections/About";
 import { Experience } from "@/components/sections/Experience";
 import { Works } from "@/components/sections/Works";
 import { Services } from "@/components/sections/Services";
+import { TechStack } from "@/components/sections/TechStack";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { Certificates } from "@/components/sections/Certificates";
+import { Blog } from "@/components/sections/Blog";
+import { OpenSource } from "@/components/sections/OpenSource";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/layout/Footer";
 import { WormDivider } from "@/components/WormDivider";
@@ -17,10 +22,21 @@ export default function Home() {
         <WormDivider />
         <About />
         <WormDivider />
+        <TechStack />
+        <WormDivider />
         <Experience />
         <Works />
         <WormDivider />
         <Services />
+        <WormDivider />
+        <Testimonials />
+        <WormDivider />
+        <Certificates />
+        <WormDivider />
+        <Blog />
+        <WormDivider />
+        <OpenSource />
+        <WormDivider />
         <Contact />
       </main>
       <Footer />

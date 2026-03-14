@@ -8,6 +8,11 @@ const navLinks = [
   { label: "Experience", id: "experience" },
   { label: "Works", id: "works" },
   { label: "Services", id: "services" },
+  { label: "Tech Stack", id: "techstack" },
+  { label: "Testimonials", id: "testimonials" },
+  { label: "Certificates", id: "certificates" },
+  { label: "Blog", id: "blog" },
+  { label: "Open Source", id: "opensource" },
 ];
 
 export function Navbar() {
@@ -47,12 +52,12 @@ export function Navbar() {
           </button>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-5">
             {navLinks.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollTo(item.id)}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
+                className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors relative group whitespace-nowrap"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-foreground group-hover:w-full transition-all duration-300" />
