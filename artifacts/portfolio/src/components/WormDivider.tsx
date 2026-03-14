@@ -1,15 +1,21 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { useEffect } from "react";
 
 export function WormDivider() {
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
+  const controls = useAnimation();
 
-  const pathLength = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
-  const opacity = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [0, 1, 1, 0]);
+  useEffect(() => {
+    if (isInView) {
+      controls.start({
+        pathLength: 1,
+        opacity: 1,
+        transition: { duration: 1.8, ease: "easeInOut" },
+      });
+    }
+  }, [isInView, controls]);
 
   return (
     <div ref={ref} className="relative w-full flex justify-center py-8 overflow-hidden">
@@ -25,7 +31,8 @@ export function WormDivider() {
           strokeWidth="3"
           strokeLinecap="round"
           className="text-border"
-          style={{ pathLength, opacity }}
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={controls}
           fill="none"
         />
       </svg>

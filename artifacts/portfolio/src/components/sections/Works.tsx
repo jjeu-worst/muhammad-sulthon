@@ -8,7 +8,7 @@ export function Works() {
   if (isLoading || !data) return null;
 
   return (
-    <section id="works" className="py-32 px-6 md:px-12 bg-[#0a0a0a] text-white rounded-t-[3rem] md:rounded-t-[4rem] -mt-8 relative z-20">
+    <section id="works" className="py-32 px-6 md:px-12 bg-[#0a0a0a] text-white rounded-t-[3rem] md:rounded-t-[4rem]">
       <div className="max-w-7xl mx-auto">
         
         <motion.div
