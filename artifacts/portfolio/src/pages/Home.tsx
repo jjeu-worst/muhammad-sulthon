@@ -5,7 +5,6 @@ import { Experience } from "@/components/sections/Experience";
 import { Works } from "@/components/sections/Works";
 import { Services } from "@/components/sections/Services";
 import { TechStack } from "@/components/sections/TechStack";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { Certificates } from "@/components/sections/Certificates";
 import { Blog } from "@/components/sections/Blog";
 import { OpenSource } from "@/components/sections/OpenSource";
@@ -28,8 +27,6 @@ export default function Home() {
         <Works />
         <WormDivider />
         <Services />
-        <WormDivider />
-        <Testimonials />
         <WormDivider />
         <Certificates />
         <WormDivider />

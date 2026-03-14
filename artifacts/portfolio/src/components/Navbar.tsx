@@ -9,7 +9,6 @@ const navLinks = [
   { label: "Works", id: "works" },
   { label: "Services", id: "services" },
   { label: "Tech Stack", id: "techstack" },
-  { label: "Testimonials", id: "testimonials" },
   { label: "Certificates", id: "certificates" },
   { label: "Blog", id: "blog" },
   { label: "Open Source", id: "opensource" },
